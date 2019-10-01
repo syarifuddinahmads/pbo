@@ -3,34 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package npm06989modul3laundry;
+package npm06989modul4laundry;
 
 /**
  *
  * @author udin
  */
-public class Manusia {
+public class Pelanggan extends Manusia{
     
-    String nama;
-    String noHp;
+    int id;
 
-    public String getNama() {
-        return nama;
+    public int getId() {
+        return id;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
-    public String getNoHp() {
-        return noHp;
-    }
-
-    public void setNoHp(String noHp) {
-        this.noHp = noHp;
+    public void setId(int id) {
+        this.id = id;
     }
     
+    @Override
     public void print(){
+        System.out.println("ID Pegawai : "+this.getId());
         System.out.println("Nama : "+this.getNama());
         System.out.println("No Hp : "+this.getNoHp());
     }

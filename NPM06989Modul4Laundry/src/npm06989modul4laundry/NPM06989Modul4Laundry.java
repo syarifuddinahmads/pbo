@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package npm06989modul3laundry;
+package npm06989modul4laundry;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -62,30 +62,17 @@ public class NPM06989Modul4Laundry {
 
         System.out.println("\n\nData Pegawai : ");
         for (int i = 0; i < pegawaiArray.size(); i++) {
-            System.out.println(
-                    "ID Pegawai : " + pegawaiArray.get(i).getId() + "\n"
-                    + "Nama : " + pegawaiArray.get(i).getNama() + "\n"
-                    + "No. Hp : " + pegawaiArray.get(i).getNoHp()
-            );
+            pegawaiArray.get(i).print();
         }
 
         System.out.println("\n\nData Pelanggan : ");
         for (int i = 0; i < pelangganArray.size(); i++) {
-            System.out.println(
-                    "ID Pelanggan : " + pelangganArray.get(i).getId() + "\n"
-                    + "Nama : " + pelangganArray.get(i).getNama() + "\n"
-                    + "No. Hp : " + pelangganArray.get(i).getNoHp()
-            );
+            pelangganArray.get(i).print();
         }
 
         System.out.println("\n\nData Cucian : ");
         for (int i = 0; i < cucianArray.size(); i++) {
-            System.out.println(
-                    "Nama Pegawai : " + cucianArray.get(i).getPegawai().nama + "\n"
-                    + "Nama Pelanggan : " + cucianArray.get(i).getPelanggan().nama + "\n"
-                    + "Cucian : " + cucianArray.get(i).getBerat() + "\n"
-                    + "Harga Total Cucian : " + cucianArray.get(i).getHargaTotal()
-            );
+            cucianArray.get(i).print();
         }
 
     }
@@ -125,7 +112,7 @@ public class NPM06989Modul4Laundry {
         cucian.setPelanggan(pelangganArray.get(scan.nextInt() - 1));
         System.out.print("Berat Cucian (KG) :");
         cucian.setBerat(scan.nextFloat());
-        System.out.print("Harga Totalnya adalah : Rp." + cucian.getHargaTotal());
+        System.out.print("Harga Totalnya adalah : Rp." + cucian.getHargaTotal(scan.nextFloat()));
         cucianArray.add(cucian);
     }
 

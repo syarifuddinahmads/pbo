@@ -56,6 +56,7 @@ public class NPM06989_Karyawan {
                     System.out.println("Apakah anda akan keluar ? (Y/T)");
                     String exit = input.next();
                     if(exit.equals("Y") || exit.equals("y")){
+                        System.out.println("Exit");
                         System.exit(0);
                     }
                     if(exit.equals("T") || exit.equals("y")){

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package npm06989modul3laundry;
+package npm06989modul4laundry;
 
 /**
  *
@@ -61,7 +61,10 @@ public class Cucian extends Manusia{
     }
     
     public void print(){
-        
+        System.out.println("Nama Pegawai : "+this.getPegawai().getNama());
+        System.out.println("Nama Pelanggan : "+this.getPelanggan().getNama());
+        System.out.println("Berat Cucian : "+this.getBerat()+" KG.");
+        System.out.println("Harga Total Cucian : "+this.getHargaTotal(this.getHargaTotal(berat), this.getPerKilo()));
     }
     
 }
