@@ -17,7 +17,7 @@ public class NPM06989_Karyawan {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println((65-100) * 0.9);
+//        System.out.println((65-100) * 0.9);
         Scanner input = new Scanner(System.in);
         int jumlahKaryawan;
         Karyawan[] listKaryawan = null;

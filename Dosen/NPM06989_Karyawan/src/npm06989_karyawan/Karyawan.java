@@ -14,6 +14,8 @@ public class Karyawan extends TinggiBeratBadan{
     String jenisKelamin;
     String statusIdeal;   
     TinggiBeratBadan tbb = new TinggiBeratBadan();
+    
+    public Karyawan(){}
 
     public Karyawan(String nama, String jenisKelamin,int beratBadan,int tinggiBadan) {
         tbb.setBeratBadan(beratBadan);
@@ -25,6 +27,11 @@ public class Karyawan extends TinggiBeratBadan{
     
     public String showKaryawan() {
         return " Nama : "+nama+ " | Tinggi Badan : "+tbb.getTinggiBadan()+" | Berat Badan : "+tbb.getBeratBadan()+ " | Jenis Kelamin : "+jenisKelamin+ " | Status Ideal : "+statusIdeal;
+    }
+    
+    @Override
+    public String idealCount(String jenisKelamin){
+        return "";
     }
     
     

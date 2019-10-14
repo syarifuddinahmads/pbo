@@ -26,7 +26,7 @@ public class NPM06989Modul2Array {
         listPegawai[3] = pegawai4;
         
         for (int i = 0; i < listPegawai.length; i++) {
-            System.out.println("---"+listPegawai[i].show());;
+            System.out.println("---"+listPegawai[i].show());
         }
     }
     
