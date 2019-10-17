@@ -28,11 +28,7 @@ public class Karyawan extends TinggiBeratBadan{
     public String showKaryawan() {
         return " Nama : "+nama+ " | Tinggi Badan : "+tbb.getTinggiBadan()+" | Berat Badan : "+tbb.getBeratBadan()+ " | Jenis Kelamin : "+jenisKelamin+ " | Status Ideal : "+statusIdeal;
     }
-    
-    @Override
-    public String idealCount(String jenisKelamin){
-        return "";
-    }
+ 
     
     
 }

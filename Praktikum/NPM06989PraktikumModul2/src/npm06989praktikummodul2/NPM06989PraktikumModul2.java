@@ -18,7 +18,7 @@ public class NPM06989PraktikumModul2 {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Karyawan karyawan = new Karyawan();
+        DataKaryawan dataKaryawan = new DataKaryawan();
         String nama;
         String jabatan;
         String alamat;
@@ -43,23 +43,23 @@ public class NPM06989PraktikumModul2 {
                         alamat = input.next();
                         System.out.print("Jumlah Gaji : ");
                         jumlahGaji = input.nextFloat();
-                        karyawan.tambah(karyawan, nama, jabatan, alamat, jumlahGaji);
+                        dataKaryawan.tambah(dataKaryawan, nama, jabatan, alamat, jumlahGaji);
                     }
                     break;
                 case 2:
-                    karyawan.show(karyawan);
+                    dataKaryawan.show(dataKaryawan);
                     break;
                 case 3:
                     System.out.println("Edit Karyawan ");
                     System.out.print("Input nama karyawan : ");
                     nama = input.next();
-                    karyawan.edit(karyawan, nama);
+                    dataKaryawan.edit(dataKaryawan, nama);
                     break;
                 case 4:
                     System.out.println("Hapus Karyawan ");
                     System.out.print("Input nama karyawan : ");
                     nama = input.next();
-                    karyawan.delete(karyawan, nama);
+                    dataKaryawan.delete(dataKaryawan, nama);
                     break;
                 case 5:
                     System.out.println("Keluar !");
