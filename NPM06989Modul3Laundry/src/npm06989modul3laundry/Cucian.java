@@ -37,7 +37,9 @@ public class Cucian extends Manusia{
     }
 
     public void setBerat(float berat) {
+        float perKilo = 5000;
         this.berat = berat;
+        this.hargaTotal = this.getBerat() * perKilo;
     }
 
     public float getHargaTotal() {
