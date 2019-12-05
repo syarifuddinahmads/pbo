@@ -17,73 +17,76 @@ import javax.swing.JFrame;
  *
  * @author praktikan
  */
-public class KamusView extends ComponentView{
+public class KamusView extends ComponentView {
 
     public KamusView() {
-        
-        lblKamus.setBounds(200,24,200,26);
-        lblKamus.setFont(new Font("Consolas",Font.BOLD,24));
+
+        lblKamus.setBounds(200, 18, 200, 26);
+        lblKamus.setFont(new Font("Consolas", Font.BOLD, 24));
         add(lblKamus);
-        
-        jcColor.setBounds(400,24,75,26);
+
+        jcColor.setBounds(410, 18, 75, 26);
         add(jcColor);
-        
+
         jcColor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String colorName =  jcColor.getSelectedItem().toString().toLowerCase();
-                
+                String colorName = jcColor.getSelectedItem().toString().toLowerCase();
+                switch (colorName) {
+                    case "red":
+                        jpLayout.setBackground(Color.red);
+                        break;
+                    case "blue":
+                        jpLayout.setBackground(Color.blue);
+                        break;
+                    default:
+                        jpLayout.setBackground(Color.red);
+                        break;
+                }
             }
         });
-        
-        jrIndoToIng.setBounds(12,60,200,26);
+
+        jrIndoToIng.setBounds(18, 60, 200, 26);
+        jrIndoToIng.setBackground(new Color(0, 0, 0, 0));
         add(jrIndoToIng);
-        
-        jrIndoToIng.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                System.out.println("---"+e.getActionCommand());
-                
-            }
-        });
-        
-        jrIngToIndo.setBounds(250,60,250,26);
+
+        jrIngToIndo.setBounds(250, 60, 250, 26);
+        jrIngToIndo.setBackground(new Color(0, 0, 0, 0));
         add(jrIngToIndo);
         
-        jrIngToIndo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                System.out.println("---"+e.getActionCommand());
-                
-            }
-        });
-        lblKata.setBounds(12,100,100,26);
+        buttonGroup.add(jrIndoToIng);
+        buttonGroup.add(jrIngToIndo);
+
+        lblKata.setBounds(24, 100, 100, 26);
         add(lblKata);
-        
-        jtxtKata.setBounds(64,100,410,26);
+
+        jtxtKata.setBounds(100, 100, 375, 26);
         add(jtxtKata);
-        
+
         jtxtKata.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                if () {
+                    
+                }
             }
         });
-        
-    
-        
-        jtxtDetail.setBounds(12,140,460,100);
+
+        jtxtDetail.setBounds(24, 140, 450, 100);
         add(jtxtDetail);
+
+        jpLayout.setBounds(12, 56, 475, 375);
+        jpLayout.setBackground(Color.red);
+        add(jpLayout);
         
+
         setTitle("Kamus");
-        setSize(500,500);
+        setSize(500, 500);
         setLayout(null);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        
+
     }
-    
+
 }

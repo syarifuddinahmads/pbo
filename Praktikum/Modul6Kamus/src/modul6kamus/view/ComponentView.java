@@ -5,9 +5,11 @@
  */
 package modul6kamus.view;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -23,9 +25,11 @@ public class ComponentView extends JFrame{
     JComboBox jcColor = new JComboBox(color);
     JRadioButton jrIndoToIng = new JRadioButton("Inggris - Indonesia");
     JRadioButton jrIngToIndo = new JRadioButton("Indonesia - Inggris");
+    ButtonGroup buttonGroup = new ButtonGroup();
     JLabel lblKata = new JLabel("Kata :");
     JTextField jtxtKata = new JTextField();
     JTextArea jtxtDetail = new JTextArea();
+    JPanel jpLayout = new JPanel();
     
     
     
