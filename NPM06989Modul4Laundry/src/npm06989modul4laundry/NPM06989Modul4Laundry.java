@@ -111,8 +111,7 @@ public class NPM06989Modul4Laundry {
         System.out.print("ID Pelanggan :");
         cucian.setPelanggan(pelangganArray.get(scan.nextInt() - 1));
         System.out.print("Berat Cucian (KG) :");
-        cucian.setBerat(scan.nextFloat());
-        System.out.print("Harga Totalnya adalah : Rp." + cucian.getHargaTotal(scan.nextFloat()));
+        cucian.getHargaTotal(scan.nextFloat());
         cucianArray.add(cucian);
     }
 
