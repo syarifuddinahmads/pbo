@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Proses extends AbstractProses{
 
     DataNilai[] dataNilai = new DataNilai[100];
-    Scanner input = new Scanner(System.in);
+    Scanner input =   Scanner(System.in);
 
     @Override
     public void tambahNilai() {

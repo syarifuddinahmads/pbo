@@ -9,9 +9,12 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import static java.awt.image.ImageObserver.WIDTH;
 import java.beans.PropertyChangeListener;
 import javax.swing.Action;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import modul6kamus.controller.KamusController;
 
 /**
  *
@@ -19,7 +22,11 @@ import javax.swing.JFrame;
  */
 public class KamusView extends ComponentView {
 
+    static KamusController kamusController = new KamusController();
+
     public KamusView() {
+
+        kamusController.insertDataKamus();
 
         lblKamus.setBounds(200, 18, 200, 26);
         lblKamus.setFont(new Font("Consolas", Font.BOLD, 24));
@@ -49,14 +56,17 @@ public class KamusView extends ComponentView {
         jrIndoToIng.setBounds(18, 60, 200, 26);
         jrIndoToIng.setBackground(new Color(0, 0, 0, 0));
         add(jrIndoToIng);
+        jrIndoToIng.setSelected(true);
 
         jrIngToIndo.setBounds(250, 60, 250, 26);
         jrIngToIndo.setBackground(new Color(0, 0, 0, 0));
         add(jrIngToIndo);
-        
+
         buttonGroup.add(jrIndoToIng);
         buttonGroup.add(jrIngToIndo);
 
+        
+        
         lblKata.setBounds(24, 100, 100, 26);
         add(lblKata);
 
@@ -66,9 +76,23 @@ public class KamusView extends ComponentView {
         jtxtKata.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if () {
-                    
+                if (jrIngToIndo.isSelected() == false && jrIndoToIng.isSelected() == false) {
+                   JOptionPane.showMessageDialog(null, "Pilih Translate terlebih dahulu !");
+                } else {
+                    if (jtxtKata.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Kata belum diinputkan !");
+                    } else {
+                        int status = jrIngToIndo.isSelected() == true ? 1 : 2;
+                        String kata = kamusController.searchWord(jtxtKata.getText(), status);
+                        if (kata == null) {
+                            JOptionPane.showMessageDialog(null, "Kata tidak ditemukan !");
+                        } else {
+                            System.out.println("KATA = "+kata);
+                            jtxtDetail.setText(kata);
+                        }
+                    }
                 }
+
             }
         });
 
@@ -78,7 +102,6 @@ public class KamusView extends ComponentView {
         jpLayout.setBounds(12, 56, 475, 375);
         jpLayout.setBackground(Color.red);
         add(jpLayout);
-        
 
         setTitle("Kamus");
         setSize(500, 500);

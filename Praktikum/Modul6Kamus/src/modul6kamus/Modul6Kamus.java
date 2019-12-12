@@ -5,9 +5,7 @@
  */
 package modul6kamus;
 
-import javax.swing.text.Keymap;
 import modul6kamus.view.KamusView;
-import sun.security.krb5.internal.KDCOptions;
 
 /**
  *

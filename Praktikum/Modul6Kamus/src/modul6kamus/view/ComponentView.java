@@ -23,8 +23,8 @@ public class ComponentView extends JFrame{
     JLabel lblKamus = new JLabel("Kamus");
     String color[] = {"Red","Blue"};
     JComboBox jcColor = new JComboBox(color);
-    JRadioButton jrIndoToIng = new JRadioButton("Inggris - Indonesia");
-    JRadioButton jrIngToIndo = new JRadioButton("Indonesia - Inggris");
+    JRadioButton jrIndoToIng = new JRadioButton("Indonesia - Inggris");
+    JRadioButton jrIngToIndo = new JRadioButton("Inggris - Indonesia");
     ButtonGroup buttonGroup = new ButtonGroup();
     JLabel lblKata = new JLabel("Kata :");
     JTextField jtxtKata = new JTextField();
