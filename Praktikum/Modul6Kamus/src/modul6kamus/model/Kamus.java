@@ -22,6 +22,9 @@ public class Kamus {
         this.enEx = enEx;
     }
 
+    public Kamus() {
+    }
+
     public void setInEx(String inEx) {
         this.inEx = inEx;
     }

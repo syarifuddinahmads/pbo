@@ -5,6 +5,7 @@
  */
 package modul6kamus;
 
+import modul6kamus.view.ComponentView;
 import modul6kamus.view.KamusView;
 
 /**
@@ -16,8 +17,13 @@ public class Modul6Kamus {
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String[] args) {
-        KamusView kamusView = new KamusView();
+        
+        ComponentView kamusView = new KamusView();
+        kamusView.initView();
+        
     }
     
 }

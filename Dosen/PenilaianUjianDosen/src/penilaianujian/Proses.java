@@ -11,10 +11,10 @@ import java.util.Scanner;
  *
  * @author udin
  */
-public class Proses extends AbstractProses{
+public class Proses extends AbstractProses {
 
     DataNilai[] dataNilai = new DataNilai[100];
-    Scanner input =   Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
     @Override
     public void tambahNilai() {

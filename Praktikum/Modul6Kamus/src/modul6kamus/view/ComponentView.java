@@ -30,6 +30,10 @@ public class ComponentView extends JFrame{
     JTextField jtxtKata = new JTextField();
     JTextArea jtxtDetail = new JTextArea();
     JPanel jpLayout = new JPanel();
+
+    public void initView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

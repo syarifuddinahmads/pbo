@@ -24,8 +24,7 @@ public class KamusView extends ComponentView {
 
     static KamusController kamusController = new KamusController();
 
-    public KamusView() {
-
+    public void initView() {
         kamusController.insertDataKamus();
 
         lblKamus.setBounds(200, 18, 200, 26);
@@ -65,8 +64,6 @@ public class KamusView extends ComponentView {
         buttonGroup.add(jrIndoToIng);
         buttonGroup.add(jrIngToIndo);
 
-        
-        
         lblKata.setBounds(24, 100, 100, 26);
         add(lblKata);
 
@@ -77,7 +74,7 @@ public class KamusView extends ComponentView {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (jrIngToIndo.isSelected() == false && jrIndoToIng.isSelected() == false) {
-                   JOptionPane.showMessageDialog(null, "Pilih Translate terlebih dahulu !");
+                    JOptionPane.showMessageDialog(null, "Pilih Translate terlebih dahulu !");
                 } else {
                     if (jtxtKata.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Kata belum diinputkan !");
@@ -87,7 +84,7 @@ public class KamusView extends ComponentView {
                         if (kata == null) {
                             JOptionPane.showMessageDialog(null, "Kata tidak ditemukan !");
                         } else {
-                            System.out.println("KATA = "+kata);
+                            System.out.println("KATA = " + kata);
                             jtxtDetail.setText(kata);
                         }
                     }
@@ -109,7 +106,6 @@ public class KamusView extends ComponentView {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-
     }
 
 }
